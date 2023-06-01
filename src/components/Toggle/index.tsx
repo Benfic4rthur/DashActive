@@ -1,31 +1,35 @@
-import React, { useState } from 'react';
-import { Container, ToggleLabel, ToggleSelector } from './styles';
+import React from 'react';
 
-interface ItoogleContext {
+import {
+    Container,
+    ToggleLabel,
+    ToggleSelector
+} from './styles';
+
+
+interface IToggleProps {
     labelLeft: string;
     labelRight: string;
-    isChecked: boolean;
-    onChange(): void;   
+    checked: boolean;
+    onChange(): void;
 }
 
-const Toggle: React.FC<ItoogleContext> = ({
+const Toggle: React.FC<IToggleProps> = ({
     labelLeft,
     labelRight,
-    isChecked,
+    checked,
     onChange
-}) => {
-    return (
-        <Container>
-            <ToggleLabel>{labelLeft}</ToggleLabel>
-            <ToggleSelector
-                checked={isChecked}
-                uncheckedIcon={false}
-                checkedIcon={false}
-                onChange={onChange}
-            />
-            <ToggleLabel>{labelRight}</ToggleLabel>
-        </Container>
-    );
-};
+}) => (
+    <Container>
+        <ToggleLabel>{labelLeft}</ToggleLabel>
+        <ToggleSelector                    
+            checked={checked}
+            uncheckedIcon={false}
+            checkedIcon={false}
+            onChange={onChange}
+        />
+        <ToggleLabel>{labelRight}</ToggleLabel>
+    </Container>
+)
 
 export default Toggle;

@@ -44,13 +44,13 @@ const List: React.FC = () => {
       ? {
           pageTitle: 'Carteira - Entradas',
           title: 'Entradas',
-          lineColor: '#4E41F0',
+          linecolor: '#4E41F0',
           listData: gains,
         }
       : {
           pageTitle: 'Carteira - Saídas',
           title: 'Saídas',
-          lineColor: '#E44C4E',
+          linecolor: '#E44C4E',
           listData: expenses,
         };
   }, [movimentType]);
@@ -123,7 +123,7 @@ const List: React.FC = () => {
         <title>{pageData.pageTitle}</title>
       </Helmet>
       <Container>
-        <ContentHeader title={pageData.title} lineColor={pageData.lineColor}>
+        <ContentHeader title={pageData.title} linecolor={pageData.linecolor}>
           <SelectInput
             options={listaMeses}
             onChange={e => setMonthSelected(e.target.value)}

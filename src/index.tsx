@@ -1,18 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
-import App from './App';
+import ReactDOM from 'react-dom';
+
 import { ThemeProvider } from './hooks/theme';
 import { AuthProvider } from './hooks/auth';
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-root.render(
-  <React.StrictMode>
+import App from './App';
+
+ReactDOM.render(
+  <React.StrictMode>    
     <ThemeProvider>
       <AuthProvider>
-      <App />
+        <App />
       </AuthProvider>
     </ThemeProvider>
   </React.StrictMode>,
+  document.getElementById('root')
 );
-reportWebVitals();

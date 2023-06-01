@@ -1,43 +1,59 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-interface ItagProps {
-    color: string;
+interface ITagProps {
+  color: string;
 }
+
+
 export const Container = styled.li`
-    color: ${props => props.theme.colors.white};
-    background-color: ${props => props.theme.colors.terciary};
+    background-color: ${props => props.theme.colors.tertiary};
+
+    list-style: none;
     border-radius: 10px;
-    margin: 10px;
+
+    margin: 10px 0;
     padding: 12px 10px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     cursor: pointer;
-    transition: all 0.3s;
-    opacity: 1;
-    &:hover {
-        opacity: 0.7;
-        transform: translateX(10px);
-        outline: 5px solid ${props => props.theme.colors.primary};
-        transition: 0.4s;
-    }
+    transition: all .3s;
+
     position: relative;
+
+
+    &:hover {
+        opacity: .7;
+        transform: translateX(10px);
+    }
+
+
     > div {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        padding-left: 10px;
+        justify-content: space-between;    
+
+        padding-left: 10px;    
     }
+
     > div span {
+        font-size: 22px;
         font-weight: 500;
-        font-size: 16px;
     }
+
+    
+
+    
 `;
-export const Tag = styled.div<ItagProps>`
-    background-color: ${props => props.color};
+
+export const Tag = styled.div<ITagProps>`
     width: 13px;
     height: 60%;
+
+    background-color: ${props => props.color};
+
     position: absolute;
     left: 0;
-    border-radius: 3px;
 `;

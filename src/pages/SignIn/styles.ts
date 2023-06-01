@@ -37,7 +37,7 @@ export const Form = styled.form`
 
     border-radius: 10px;
 
-    background-color: ${props => props.theme.colors.terciary};
+    background-color: ${props => props.theme.colors.tertiary};
 `;
 
 export const FormTitle = styled.h1`

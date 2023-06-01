@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from './styles';
 import arrowUp from '../../assets/arrow-down.svg';
 import arrowDown from '../../assets/arrow-up.svg';
-import dolar from '../../assets/dollar.svg';
+import dolar from '../../assets/dolar.svg';
 import CountUp from 'react-countup';
 
 interface IWalletBoxprops {

@@ -4,6 +4,7 @@ interface ILegendProps {
     color: string;
 }
 
+
 export const Container = styled.div`
     width: 32%;
     height: 240px;
@@ -24,7 +25,7 @@ export const Container = styled.div`
     }
 `;
 
-export const Sideleft = styled.aside`
+export const SideLeft = styled.aside`
     padding: 30px 20px;
 
     > h2 {

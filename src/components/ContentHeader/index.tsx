@@ -1,27 +1,29 @@
 import React from 'react';
-import { Container } from './styles';
-import { TitleContainer, Controllers } from './styles';
-import SelectInput from '../../components/SelectInput';
 
-interface ItitleContainerProps {
+import { 
+    Container,
+    TitleContainer,
+    Controllers 
+}  from './styles';
+
+interface IContentHeaderProps {
     title: string;
-    lineColor: string;
+    linecolor: string;
     children: React.ReactNode;
 }
-const ContentHeader: React.FC<ItitleContainerProps> = ( {title, lineColor, children} ) => {
 
-    return (
-        <div>
-            <Container >
-                <TitleContainer linecolor={lineColor}>
-                    <h2>{title}</h2>
-                </TitleContainer>
-                <Controllers>
-                    {children}
-                </Controllers>  
-            </Container>
-        </div>
-    );
-};
+const ContentHeader: React.FC<IContentHeaderProps> = ({
+    title, linecolor, children
+}) => (
+    <Container>
+        <TitleContainer linecolor={linecolor}>
+            <h1>{title}</h1>                
+        </TitleContainer>
+        <Controllers>
+            {children}
+        </Controllers>
+    </Container>
+);
+
 
 export default ContentHeader;

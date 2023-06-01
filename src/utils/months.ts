@@ -1,7 +1,7 @@
 export default [
     'Janeiro',
     'Fevereiro',
-    'Março',
+    'Março',
     'Abril',
     'Maio',
     'Junho',
@@ -11,4 +11,4 @@ export default [
     'Outubro',
     'Novembro',
     'Dezembro'
-]
+];

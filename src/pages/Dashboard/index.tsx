@@ -11,7 +11,7 @@ import { pegaMeses } from '../../utils/date';
 import WalletBox from '../../components/WalletBox';
 import { Content } from './styles';
 import Messagebox from '../../components/MessageBox';
-import PieChartBox from '../../components/PieChart';
+import PieChartBox from '../../components/PieChartBox';
 import PieChartYear from '../../components/PieChartYear';
 import { Helmet } from 'react-helmet';
 import favicon from '../../assets/logo.svg';
@@ -109,7 +109,7 @@ const Dashboard: React.FC = () => {
       return {
         title: 'Opss!!',
         description: 'Neste mês, não há registros de entradas e saídas!',
-        footertext: 'Parece que você não fez nenhum registro na data selecionada!',
+        footertext: 'Parece que você não fez nenhum registro nesta data!',
         icon: 'opps',
       };
     } else if (saldo === 0) {
@@ -291,7 +291,7 @@ const Dashboard: React.FC = () => {
         <title>Carteira - Gráficos</title>
       </Helmet>
       <Container>
-        <ContentHeader title='Dashboard' lineColor='#f7931b'>
+        <ContentHeader title='Dashboard' linecolor='#f7931b'>
           <SelectInput
             options={listaMeses}
             onChange={e => setMonthSelected(e.target.value)}
