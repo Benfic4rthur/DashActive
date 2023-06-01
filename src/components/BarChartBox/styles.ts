@@ -6,7 +6,7 @@ interface ILegendProps {
 
 const animate = keyframes`
     0% {
-        transform: translateX(100px);
+        transform: translateY(100px);
         opacity: 0;
     }
     50%{
@@ -19,7 +19,7 @@ const animate = keyframes`
 `;
 
 export const Container = styled.div`
-    width: 48%;
+    width: 49%;
     min-height: 260px;
 
     margin: 10px 0;
@@ -32,6 +32,19 @@ export const Container = styled.div`
     display: flex;
 
     animation: ${animate} .5s;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: ${props => props.theme.colors.secondary};
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: ${props => props.theme.colors.tertiary};
+    }
 
     @media(max-width: 1200px){
         display: flex;
@@ -60,19 +73,18 @@ export const LegendContainer = styled.ul`
     padding-right: 15px;
     overflow-y: scroll;
 
-    ::-webkit-scrollbar {
+    &::-webkit-scrollbar {
         width: 10px;
     }
 
-    ::-webkit-scrollbar-thumb {
+    &::-webkit-scrollbar-thumb {
         background-color: ${props => props.theme.colors.secondary};
         border-radius: 10px;
     }
 
-    ::-webkit-scrollbar-track {
+    &::-webkit-scrollbar-track {
         background-color: ${props => props.theme.colors.tertiary};
     }
-
     
     @media(max-width: 1200px){
         display: flex;
